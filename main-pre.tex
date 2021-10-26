@@ -1,0 +1,81 @@
+\documentclass[journal]{IEEEtran}
+
+\ifCLASSINFOpdf
+   \usepackage[pdftex]{graphicx}
+\else
+   \usepackage[dvips]{graphicx}
+\fi
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{graphics}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{url}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Multi-relational Graph Attention Networks for Traffic Signal Interaction Modeling and Prediction}
+
+\author{
+    \IEEEauthorblockN{
+        Jing Huang\href{https://orcid.org/0000-0002-3294-5725}{\includegraphics[scale=0.06]{pictures/ORCID.png}}\IEEEauthorrefmark{1},
+        Kun Luo\href{https://orcid.org/0000-0002-6260-987X}{\includegraphics[scale=0.06]{pictures/ORCID.png}}\IEEEauthorrefmark{1},
+        Longbing Cao\href{https://orcid.org/0000-0003-1562-9429}{\includegraphics[scale=0.06]{pictures/ORCID.png}}, \textit{Senior Member}, \textit{IEEE}\IEEEauthorrefmark{2},
+        Yuanqiao Wen\IEEEauthorrefmark{3},
+        Shuyuan Zhong\IEEEauthorrefmark{1}}
+    \thanks{Manuscript received xxx; revised xxx; accepted xxx.}
+    \thanks{This work was supported by the National Natural Science Foundation of China (No. 52072287) and Zhejiang  Provincial  Science  and  Technology  Program (No. 2021C01010)}
+    \thanks{Jing Huang, Kun Luo and Shuyuan Zhong are with the School of Computer Science and Technology, Wuhan University of Technology, Wuhan 430063, China (Corresponding auther: Jing Huang, e-mail: huangjing@whut.edu.cn).}
+    \thanks{Longbing Cao, IEEE Senior Member, is with the Advanced Analytics Institute, University of Technology Sydney, Sydney, NSW 2007, Australia.}
+    \thanks{Yuanqiao Wen is with the National Engineering Research Center for Water Transport Safety, Wuhan University of Technology, Wuhan 430063, China.}
+}
+
+\markboth{IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS}{Multi-relational Graph Attention Networks for Traffic Interactions Modeling and Prediction}
+
+\IEEEtitleabstractindextext{
+    \begin{abstract}
+        Accurate real-time traffic prediction is of great importance to intelligent transportation systems, yet it remains challenging due to the complex spatio-temporal dynamics of traffic systems. Various interactions among traffic signals, including along temporal aspect alone, over spatial traffic nodes, and across spatio-temporal coupling aspect, exist in traffic systems and impact on their evolutions. The recent studies on formulating traffic prediction as a high-profile graph neural networks-based spatio-temporal graph modeling problem gains the state-of-the-art performance. However, they mainly focus on several well-known hidden relations captured by neural graph mechanisms with less on exploring those potential multi-aspect interactions coupled among diverse traffic signals. This work discusses their shortcomings on prediction capability and further proposes a novel Multi-relational Synchronous Graph Attention Network (MS-GAT) to model the traffic interactions among various spatio-temporal traffic signals and for traffic prediction. Specifically, MS-GAT learns three separate embeddings to respectively represent traffic signals-based channel, temporal and spatial relations between traffic nodes in a synchronous manner by specific graph attention networks; the channel, temporal and spatial relations are then adaptively fused according to their importance strengths to the prediction results in a deep regression framework. MS-GAT outperforms seven state-of-the-art graph networks-based traffic predictors tested on five real-world datasets, showing the value of its insights on not only capturing spatial and temporal relations over interactive traffic signals, but also the traffic signals-based channel relation and their coupling relations over the traffic evolution, where each relation contributes separately to the future traffic conditions of a node.
+    \end{abstract}
+    \begin{IEEEkeywords}
+        Traffic prediction, multi-relational modeling, spatio-temporal graph modeling, graph attention networks.
+    \end{IEEEkeywords}
+}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\input{sections/1_Introduction}
+\input{sections/2_Related_Work}
+\input{sections/3_Problem_Statement}
+\input{sections/4_The_MS-GAT_Model}
+\input{sections/5_Experiments}
+\input{sections/6_Discussion}
+\input{sections/7_Conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv, references}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pictures/Huang.jpg}}]{Jing Huang} received his Ph.D. in computer science from Huazhong University of Science and Technology, China in 2006. Before joining Wuhan University of Technology as an Associate Professor, he worked in Huazhong University of Science and Technology, China as post-doctoral Research Fellow. Moreover, he visited University of Technology, Sydney, Australia as a visiting scholar between August 2015 and August 2016. Dr. Huang’s research interests mainly include but not limited to machine learning, data mining, intelligent transportation systems (ITS), pattern recognition and computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pictures/Luo.png}}]{Kun Luo} received his B.S. degree in logistics engineering from Wuhan University of Technology, Wuhan, China in 2020. He was a postgraduate in the school of computer science and technology, Wuhan University of Technology, China when this work was done. His research interests include machine learning and pattern recognition in intelligent transportation systems (ITS).
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pictures/Cao.pdf}}]{Longbing Cao}(SM'06) received a PhD degree in pattern recognition and intelligent systems and another PhD in computing sciences. He is a Professor at the University of Technology Sydney and an Australian Research Council Future Fellow (Level 3). His current research interests include data science, data mining, machine learning, behavior informatics, artificial intelligence and intelligent systems, and their enterprise applications.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pictures/Wen.jpg}}]{Yuanqiao Wen} received his Ph.D. in computer science from Huazhong University of Science and Technology, China in 2006. He is currently the Professor and Ph.D. supervisor in the National Engineering Research Center for Water Transport Safety, Wuhan University of Technology, China. He visited Technische Universiteit Delft as a senior visiting scholar between November 2016 and December 2016. Dr. Wen’s research interests mainly include but not limited to intelligent transportation systems (ITS), data mining, artificial intelligence, and transport safety.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pictures/Zhong.png}}]{Shuyuan Zhong} received his B.S. degree in computer science from Wuhan University of Technology, Wuhan, China, in 2019. He was a postgraduate in the school of computer science and technology, Wuhan University of Technology, China when this work was done. His research interests include deep learning and graph neural networks.
+\end{IEEEbiography}
+
+\end{document}
