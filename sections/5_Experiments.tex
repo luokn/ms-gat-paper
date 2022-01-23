@@ -93,27 +93,26 @@ We train MS-GAT using the Adam optimizer with learning rate 0.001, and the train
             \multirow{2}{*}{ASTGCN(r)}                   &
             \multirow{2}{*}{Graph WaveNet}               &
             \multirow{2}{*}{STSGCN}                      &
-            \multirow{2}{*}{STFGNN}                      &
             \multirow{2}{*}{AGCRN}                       &
             \multirow{2}{*}{\textbf{MS-GAT}}                                                                                                                                                                                                          
             \\
             \\
             \hline
-            \multicolumn{1}{c|}{\multirow{3}{*}{PEMS03}} & \multicolumn{1}{c|}{MAE}      & 18.18 $\pm$ 0.15 & 17.49 $\pm$ 0.46 & 17.69 $\pm$ 1.43 & 19.85 $\pm$ 0.03 & 17.48 $\pm$ 0.15 & 16.77 $\pm$ 0.09 & -                & \textbf{15.68 $\pm$ 0.24} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 18.91 $\pm$ 0.82 & 17.15 $\pm$ 0.45 & 19.40 $\pm$ 2.24 & 19.31 $\pm$ 0.49 & 16.78 $\pm$ 0.20 & 16.30 $\pm$ 0.09 & -                & \textbf{16.11 $\pm$ 0.13} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 30.31 $\pm$ 0.25 & 30.12 $\pm$ 0.70 & 29.66 $\pm$ 1.68 & 32.94 $\pm$ 0.18 & 29.21 $\pm$ 0.56 & 28.34$\pm$ 0.46  & -                & \textbf{26.54 $\pm$ 0.16} \\
+            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD3}} & \multicolumn{1}{c|}{MAE}      & 18.18 $\pm$ 0.15 & 17.49 $\pm$ 0.46 & 17.69 $\pm$ 1.43 & 19.85 $\pm$ 0.03 & 17.48 $\pm$ 0.15 & 16.13 $\pm$ 0.19 & \textbf{15.68 $\pm$ 0.24} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 18.91 $\pm$ 0.82 & 17.15 $\pm$ 0.45 & 19.40 $\pm$ 2.24 & 19.31 $\pm$ 0.49 & 16.78 $\pm$ 0.20 & -                & \textbf{16.11 $\pm$ 0.13} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 30.31 $\pm$ 0.25 & 30.12 $\pm$ 0.70 & 29.66 $\pm$ 1.68 & 32.94 $\pm$ 0.18 & 29.21 $\pm$ 0.56 & 28.42 $\pm$ 0.07 & \textbf{26.54 $\pm$ 0.16} \\
             \hline
-            \multicolumn{1}{c|}{\multirow{3}{*}{PEMS04}} & \multicolumn{1}{c|}{MAE}      & 24.70 $\pm$ 0.22 & 22.70 $\pm$ 0.64 & 22.93 $\pm$ 1.29 & 25.45 $\pm$ 0.03 & 21.19 $\pm$ 0.10 & 19.83$\pm$ 0.06  & 19.83 $\pm$ 0.11 & \textbf{19.54 $\pm$ 0.19} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 17.12 $\pm$ 0.37 & 14.59 $\pm$ 0.21 & 16.56 $\pm$ 1.36 & 17.29 $\pm$ 0.24 & 13.90 $\pm$ 0.05 & 13.02$\pm$ 0.05  & 12.97 $\pm$ 0.09 & 13.44 $\pm$ 0.28          \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.12 $\pm$ 0.26 & 35.55 $\pm$ 0.75 & 35.22 $\pm$ 1.90 & 39.70 $\pm$ 0.04 & 33.65 $\pm$ 0.20 & 31.88$\pm$ 0.14  & 32.26 $\pm$ 0.19 & \textbf{31.69 $\pm$ 0.15} \\
+            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD4}} & \multicolumn{1}{c|}{MAE}      & 24.70 $\pm$ 0.22 & 22.70 $\pm$ 0.64 & 22.93 $\pm$ 1.29 & 25.45 $\pm$ 0.03 & 21.19 $\pm$ 0.10 & 19.75 $\pm$ 0.11 & \textbf{19.54 $\pm$ 0.19} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 17.12 $\pm$ 0.37 & 14.59 $\pm$ 0.21 & 16.56 $\pm$ 1.36 & 17.29 $\pm$ 0.24 & 13.90 $\pm$ 0.05 & 13.00 $\pm$ 0.18 & 13.44 $\pm$ 0.28          \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.12 $\pm$ 0.26 & 35.55 $\pm$ 0.75 & 35.22 $\pm$ 1.90 & 39.70 $\pm$ 0.04 & 33.65 $\pm$ 0.20 & 32.41 $\pm$ 0.20 & \textbf{31.69 $\pm$ 0.15} \\
             \hline
-            \multicolumn{1}{c|}{\multirow{3}{*}{PEMS07}} & \multicolumn{1}{c|}{MAE}      & 25.30 $\pm$ 0.52 & 25.38 $\pm$ 0.49 & 28.05 $\pm$ 2.34 & 26.85 $\pm$ 0.05 & 24.26 $\pm$ 0.14 & 22.07$\pm$ 0.11  & -                 & \textbf{20.47 $\pm$ 0.13} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.66 $\pm$ 0.33 & 11.08 $\pm$ 0.18 & 13.92 $\pm$ 1.65 & 12.12 $\pm$ 0.41 & 10.21 $\pm$ 1.65 & 9.21$\pm$ 0.07   & -                 & \textbf{8.84 $\pm$ 0.14}  \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.58 $\pm$ 0.70 & 38.78 $\pm$ 0.58 & 42.57 $\pm$ 3.31 & 42.78 $\pm$ 0.07 & 39.03 $\pm$ 0.27 & 35.80$\pm$ 0.18  & -                 & \textbf{34.17 $\pm$ 0.08} \\
+            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD7}} & \multicolumn{1}{c|}{MAE}      & 25.30 $\pm$ 0.52 & 25.38 $\pm$ 0.49 & 28.05 $\pm$ 2.34 & 26.85 $\pm$ 0.05 & 24.26 $\pm$ 0.14 & 21.19 $\pm$ 0.09      & \textbf{20.47 $\pm$ 0.13} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.66 $\pm$ 0.33 & 11.08 $\pm$ 0.18 & 13.92 $\pm$ 1.65 & 12.12 $\pm$ 0.41 & 10.21 $\pm$ 1.65 & 8.95 $\pm$ 0.08       & \textbf{8.84 $\pm$ 0.14}  \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.58 $\pm$ 0.70 & 38.78 $\pm$ 0.58 & 42.57 $\pm$ 3.31 & 42.78 $\pm$ 0.07 & 39.03 $\pm$ 0.27 & 35.12 $\pm$ 0.12      & \textbf{34.17 $\pm$ 0.08} \\
             \hline
-            \multicolumn{1}{c|}{\multirow{3}{*}{PEMS08}} & \multicolumn{1}{c|}{MAE}      & 17.86 $\pm$ 0.03 & 18.02 $\pm$ 0.14 & 18.61 $\pm$ 0.40 & 19.13 $\pm$ 0.08 & 17.13 $\pm$ 0.09 & 16.64$\pm$ 0.09  & 15.95 $\pm$ 0.13 & \textbf{14.78 $\pm$ 0.09} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.45 $\pm$ 0.03 & 11.40 $\pm$ 0.10 & 13.08 $\pm$ 1.00 & 12.68 $\pm$ 0.57 & 10.96 $\pm$ 0.07 & 10.60$\pm$ 0.06  & 10.09 $\pm$ 0.07 & \textbf{10.07 $\pm$ 0.12} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 27.83 $\pm$ 0.05 & 27.83 $\pm$ 0.20 & 28.16 $\pm$ 0.48 & 31.05 $\pm$ 0.07 & 26.80 $\pm$ 0.18 & 26.22$\pm$ 0.15  & 25.22 $\pm$ 0.12 & \textbf{24.15 $\pm$ 0.07} \\
+            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD8}} & \multicolumn{1}{c|}{MAE}      & 17.86 $\pm$ 0.03 & 18.02 $\pm$ 0.14 & 18.61 $\pm$ 0.40 & 19.13 $\pm$ 0.08 & 17.13 $\pm$ 0.09 & 16.10 $\pm$ 0.11 & \textbf{14.78 $\pm$ 0.09} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.45 $\pm$ 0.03 & 11.40 $\pm$ 0.10 & 13.08 $\pm$ 1.00 & 12.68 $\pm$ 0.57 & 10.96 $\pm$ 0.07 & 10.27 $\pm$ 0.08 & \textbf{10.07 $\pm$ 0.12} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 27.83 $\pm$ 0.05 & 27.83 $\pm$ 0.20 & 28.16 $\pm$ 0.48 & 31.05 $\pm$ 0.07 & 26.80 $\pm$ 0.18 & 25.62 $\pm$ 0.17 & \textbf{24.15 $\pm$ 0.07} \\
            \bottomrule[2pt]
         \end{tabular}
     }
@@ -132,22 +131,22 @@ We train MS-GAT using the Adam optimizer with learning rate 0.001, and the train
         \multirow{2}{*}{Graph WaveNet}              &
         \multirow{2}{*}{STSGCN}                     &
         \multirow{2}{*}{STGCNN}                     &
-        \multirow{2}{*}{STFGNN}                     &
+        \multirow{2}{*}{AGCRN}                     &
         \multirow{2}{*}{\textbf{MS-GAT}}                                                                                                        
         \\
         \\
         \hline
-        \multicolumn{1}{c|}{\multirow{3}{*}{15min}} & \multicolumn{1}{c|}{MAE}      & 1.38 & 1.36 & 1.30 & 2.54 & 1.17 & 1.16 & \textbf{1.13 $\pm$ 0.02} \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 2.90 & 2.90 & 2.73 & 5.88 & 2.34 & 2.41 & 2.44 $\pm$ 0.06          \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 2.95 & 2.96 & 2.74 & 4.79 & 2.43 & 2.33 & 2.38 $\pm$ 0.03          \\
+        \multicolumn{1}{c|}{\multirow{3}{*}{15min}} & \multicolumn{1}{c|}{MAE}      & 1.38 & 1.36 & 1.30 & 2.54 & 1.20 & 1.16 & \textbf{1.13 $\pm$ 0.02} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 2.90 & 2.90 & 2.73 & 5.88 & 2.34 & 2.47 & \textbf{2.44 $\pm$ 0.06} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 2.95 & 2.96 & 2.74 & 4.79 & 2.43 & 2.40 & \textbf{2.38 $\pm$ 0.04} \\
         \hline
-        \multicolumn{1}{c|}{\multirow{3}{*}{30min}} & \multicolumn{1}{c|}{MAE}      & 1.74 & 1.81 & 1.63 & 2.60 & 1.46 & 1.39 & \textbf{1.34 $\pm$ 0.01} \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 3.90 & 4.17 & 3.67 & 6.03 & 3.09 & 3.02 & 3.09 $\pm$ 0.04          \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 3.97 & 4.27 & 3.70 & 4.93 & 3.27 & 3.02 & \textbf{2.94 $\pm$ 0.02} \\
+        \multicolumn{1}{c|}{\multirow{3}{*}{30min}} & \multicolumn{1}{c|}{MAE}      & 1.74 & 1.81 & 1.63 & 2.60 & 1.46 & 1.41 & \textbf{1.35 $\pm$ 0.01} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 3.90 & 4.17 & 3.67 & 6.03 & 3.09 & 3.12 & \textbf{3.09 $\pm$ 0.04} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 3.97 & 4.27 & 3.70 & 4.93 & 3.27 & 3.10 & \textbf{2.94 $\pm$ 0.02} \\
         \hline
-        \multicolumn{1}{c|}{\multirow{3}{*}{60min}} & \multicolumn{1}{c|}{MAE}      & 2.07 & 2.49 & 1.95 & 2.71 & 1.83 & 1.66 & \textbf{1.65 $\pm$ 0.03} \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 4.90 & 5.79 & 4.63 & 6.39 & 4.15 & 3.77 & 3.91 $\pm$ 0.05          \\
-        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 4.74 & 5.69 & 4.52 & 5.28 & 3.20 & 1.16 & 3.68 $\pm$ 0.02          \\
+        \multicolumn{1}{c|}{\multirow{3}{*}{60min}} & \multicolumn{1}{c|}{MAE}      & 2.07 & 2.49 & 1.95 & 2.71 & 1.83 & 1.79 & \textbf{1.74 $\pm$ 0.03} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{MAPE(\%)} & 4.90 & 5.79 & 4.63 & 6.39 & 4.15 & 4.01 & \textbf{3.97 $\pm$ 0.05} \\
+        \multicolumn{1}{c|}{}                       & \multicolumn{1}{c|}{RMSE}     & 4.74 & 5.69 & 4.52 & 5.28 & 3.20 & 3.78 & 3.88 $\pm$ 0.02          \\
         \bottomrule[2pt]
     \end{tabular}
 \end{table*}
