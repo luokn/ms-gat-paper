@@ -104,9 +104,9 @@ We train MS-GAT using the Adam optimizer with learning rate 0.001, and the train
             \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 17.12 $\pm$ 0.37 & 14.59 $\pm$ 0.21 & 16.56 $\pm$ 1.36 & 17.29 $\pm$ 0.24 & 13.90 $\pm$ 0.05 & 13.00 $\pm$ 0.18 & 13.44 $\pm$ 0.28          \\
             \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.12 $\pm$ 0.26 & 35.55 $\pm$ 0.75 & 35.22 $\pm$ 1.90 & 39.70 $\pm$ 0.04 & 33.65 $\pm$ 0.20 & 32.41 $\pm$ 0.20 & \textbf{31.69 $\pm$ 0.15} \\
             \hline
-            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD7}} & \multicolumn{1}{c|}{MAE}      & 25.30 $\pm$ 0.52 & 25.38 $\pm$ 0.49 & 28.05 $\pm$ 2.34 & 26.85 $\pm$ 0.05 & 24.26 $\pm$ 0.14 & 21.19 $\pm$ 0.09      & \textbf{20.47 $\pm$ 0.13} \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.66 $\pm$ 0.33 & 11.08 $\pm$ 0.18 & 13.92 $\pm$ 1.65 & 12.12 $\pm$ 0.41 & 10.21 $\pm$ 1.65 & 8.95 $\pm$ 0.08       & \textbf{8.84 $\pm$ 0.14}  \\
-            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.58 $\pm$ 0.70 & 38.78 $\pm$ 0.58 & 42.57 $\pm$ 3.31 & 42.78 $\pm$ 0.07 & 39.03 $\pm$ 0.27 & 35.12 $\pm$ 0.12      & \textbf{34.17 $\pm$ 0.08} \\
+            \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD7}} & \multicolumn{1}{c|}{MAE}      & 25.30 $\pm$ 0.52 & 25.38 $\pm$ 0.49 & 28.05 $\pm$ 2.34 & 26.85 $\pm$ 0.05 & 24.26 $\pm$ 0.14 & 21.19 $\pm$ 0.09 & \textbf{20.47 $\pm$ 0.13} \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.66 $\pm$ 0.33 & 11.08 $\pm$ 0.18 & 13.92 $\pm$ 1.65 & 12.12 $\pm$ 0.41 & 10.21 $\pm$ 1.65 & 8.95 $\pm$ 0.08  & \textbf{8.84 $\pm$ 0.14}  \\
+            \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{RMSE}     & 38.58 $\pm$ 0.70 & 38.78 $\pm$ 0.58 & 42.57 $\pm$ 3.31 & 42.78 $\pm$ 0.07 & 39.03 $\pm$ 0.27 & 35.12 $\pm$ 0.12 & \textbf{34.17 $\pm$ 0.08} \\
             \hline
             \multicolumn{1}{c|}{\multirow{3}{*}{PEMSD8}} & \multicolumn{1}{c|}{MAE}      & 17.86 $\pm$ 0.03 & 18.02 $\pm$ 0.14 & 18.61 $\pm$ 0.40 & 19.13 $\pm$ 0.08 & 17.13 $\pm$ 0.09 & 16.10 $\pm$ 0.11 & \textbf{14.78 $\pm$ 0.09} \\
             \multicolumn{1}{c|}{}                        & \multicolumn{1}{c|}{MAPE(\%)} & 11.45 $\pm$ 0.03 & 11.40 $\pm$ 0.10 & 13.08 $\pm$ 1.00 & 12.68 $\pm$ 0.57 & 10.96 $\pm$ 0.07 & 10.27 $\pm$ 0.08 & \textbf{10.07 $\pm$ 0.12} \\
@@ -129,7 +129,7 @@ We train MS-GAT using the Adam optimizer with learning rate 0.001, and the train
         \multirow{2}{*}{Graph WaveNet}              &
         \multirow{2}{*}{STSGCN}                     &
         \multirow{2}{*}{STGCNN}                     &
-        \multirow{2}{*}{AGCRN}                     &
+        \multirow{2}{*}{AGCRN}                      &
         \multirow{2}{*}{\textbf{MS-GAT}}                                                                                                        
         \\
         \\
@@ -209,7 +209,7 @@ To evaluate the effectiveness of three critical ingredients in the architecture 
     \label{fig:ablation}
 \end{figure}
 
-First,  the multi-component structure is shown effective for spatio-temporal forecasting. Importantly, adding more components (\textit{TPCs})  to MS-GAT can contribute to accurate prediction. However, it does not mean  more components lead to the better results. As shown in Table~\ref{tab:ablation}, the model setting with four \textit{TPCs} achieves the best performance on PEMSD3, while the prediction on PEMSD4, PEMSD7 and PEMSD8 requires five \textit{TPCs} for the best. This is owing to that the traffic conditions of different physical road networks show specific spatio-temporal system complexities. When taking more historical horizons as the input of each \textit{TPC} separately, the prediction of MS-GAT would worsen instead. In other words, more input sequences to model could be harmful or meaningless. Therefore, the number of \textit{TPC} components is an important hyperparameter, which determines the performance of MS-GAT.
+First, the multi-component structure is shown effective for spatio-temporal forecasting. Importantly, adding more components (\textit{TPCs})  to MS-GAT can contribute to accurate prediction. However, it does not mean  more components lead to the better results. As shown in Table~\ref{tab:ablation}, the model setting with four \textit{TPCs} achieves the best performance on PEMSD3, while the prediction on PEMSD4, PEMSD7 and PEMSD8 requires five \textit{TPCs} for the best. This is owing to that the traffic conditions of different physical road networks show specific spatio-temporal system complexities. When taking more historical horizons as the input of each \textit{TPC} separately, the prediction of MS-GAT would worsen instead. In other words, more input sequences to model could be harmful or meaningless. Therefore, the number of \textit{TPC} components is an important hyperparameter, which determines the performance of MS-GAT.
 
 Second, the \textit{TE} is proven very necessary for ensuring the model accuracy. The  results in Table~\ref{tab:ablation} show the model settings with \textit{TE} are consistently superior to those without \textit{TE}. It demonstrates the traffic conditions at the past distinct time horizons have different correlation strengths with the one at the same future time horizon. Thus, the prediction effect can be significantly improved through deploying \textit{TE} in MS-GAT.
 

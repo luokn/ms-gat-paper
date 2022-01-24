@@ -48,14 +48,12 @@ $\odot$ represents the element-wise product, the function $TE(\cdot)$ denotes th
 
 We first briefly review an ordinary self-attention scheme, called scaled dot-product attention \cite{vaswani2017attention}, which adopts ordinary dot-product between vectors as the core operation of whole self-attention process to obtain the correlation strength between input vectors, i.e., \textit{attention score}. 
 
-
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.32\textwidth]{pictures/Attention.png}
     \caption{The calculation process of self-attention in an exemplar sentence - \textit{this is a cat}. Here, $q$ refers to the \textit{query} vector associated with the word ‘this’, ‘is’, ‘a’ or ‘cat’; $(k_1, v_1)$, $(k_2, v_2)$, $(k_3, v_3)$ and $(k_4, v_4)$ represent the \textit{key-value} pairs of the four separate words respectively; $f$ denotes a type of attention function that adopts dot-product operation between two vectors (i.e., the above \textit{key} and \textit{query}), and $s_1$, $s_2$, $s_3$ and $s_4$ are its resulting attention scores respectively; the $softmax$ function is used to normalize these attention score to $a_1$, $a_2$, $a_3$ and $a_4$ respectively, which are all in the range of $[0, 1]$; $v'$ is the result of current word after performing self-attention by its associated $q$, which contains the contexts of this sentence except for the information of current word itself.}
     \label{fig:attention}
 \end{figure}
-
 
 Taking a linguistic sentence, e.g., \textit{this is a cat}, as an example. Clearly, it is a sequence of words, and can be viewed as a sequential data just over temporal dimension. Importantly, this sentence also conceals the contextual dependencies in temporal dimension between these four separate words. To find out such hidden dependency relations from this sentence, valuable for the tasks of NLP (e.g., language translation), the ordinary attention scheme can be alone applied in a specified information dimension, i.e., temporal dimension of this sequential data. Concretely, each word of the sentence is initially embedded to a vector by a vectorization method (e.g., classic word2vec \cite{church2017word2vec}), and further three same vectors (called query, key and value respectively) derived from the previous vector by linear transform are inputted simultaneously into the self-attention module. After each query of this sentence (i.e., corresponding to each word respectively) accomplishes self-attention operation with all of four key-value pairs, an output sequential data is obtained, which exposes those potential significant contexts into its each sequential element. Figure~\ref{fig:attention} shows the calculation process of this self-attention scheme in the exemplar sentence. Formally, given a query $q$, all keys (packed into matrices $K$) and values (packed into matrices $V$), the output value $value$ is weighted average over the input values as below.
 
